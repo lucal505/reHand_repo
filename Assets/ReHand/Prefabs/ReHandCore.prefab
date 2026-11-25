@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6014278396638051554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2711082092091968605}
+  - component: {fileID: 7754718875143759750}
+  - component: {fileID: 6135095829315334587}
+  - component: {fileID: 5190534608976047337}
+  - component: {fileID: 2187255794075272215}
+  - component: {fileID: 6132752352680002475}
+  m_Layer: 0
+  m_Name: ReHandCore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2711082092091968605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7754718875143759750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783affda349857f428002fe60a4bff4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReHand.Core.DataLogger
+  _autoStartSession: 1
+  _flushIntervalSeconds: 1
+--- !u!114 &6135095829315334587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af20e14bfa389ed2ad1fbd680447629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReHand.Core.TrackedEffectors
+  _cameraRig: {fileID: 0}
+  _leftHand: {fileID: 0}
+  _rightHand: {fileID: 0}
+  _leftController: {fileID: 0}
+  _rightController: {fileID: 0}
+  _controllerTipOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &5190534608976047337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f36b55f4a072ba6881530a5bb9dfc8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReHand.Core.InputModeManager
+  _effectors: {fileID: 0}
+  _enforceBlockMode: 1
+  _handOnlyGroups:
+  - Hand
+  - Hand and No Controller
+  _controllerOnlyGroups:
+  - Controller
+  - Controller and No Hand
+  - Controller and Hand
+  _trackingDebounceSeconds: 0.25
+  _lostWarningDelaySeconds: 1
+--- !u!114 &2187255794075272215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f894833c04ddd0f578b7e7266c7d12a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReHand.Core.TrajectoryRecorder
+  _effectors: {fileID: 0}
+  _recordAlways: 1
+--- !u!114 &6132752352680002475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014278396638051554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32adc44e878609708988e99fff97d80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReHand.Core.SeatAligner
+  _cameraRig: {fileID: 0}
+  _locomotor: {fileID: 0}
+  _startSeat: {fileID: 0}
+  _alignOnStart: 1
+  _realignOnRecenter: 1
+  _headWaitTimeout: 3
